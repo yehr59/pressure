@@ -239,7 +239,7 @@ var Adapter = function () {
           setTimeout(this.loopPolyfillForce.bind(this, force, event), 10);
         } else {
           force = force - this.decrement < 0 ? 0 : force - this.decrement;
-          if (force < 0.5 && this.isDeepPressed()) {
+          if (force < 0.1 && this.isDeepPressed()) {
             this.setDeepPressed(false);
             this.runClosure('endDeepPress');
           }
